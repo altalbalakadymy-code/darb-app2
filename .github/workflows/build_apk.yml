@@ -26,9 +26,8 @@ jobs:
           channel: 'stable'
           cache: true
 
-      # توليد ملفات ومجلد الأندرويد الناقصة تلقائياً
       - name: Recreate Android Project Files
-        run: flutter create . --platforms=android --org=com.example
+        run: flutter create . --platforms=android --org=com.example --project-name=darb_app2
 
       - name: Get Dependencies
         run: flutter pub get
