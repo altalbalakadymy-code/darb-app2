@@ -72,7 +72,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         Text(
                           msg.text,
                           style: TextStyle(
-                            color: msg.isMe ? Colors.white : Colors.black88,
+                            color: msg.isMe ? Colors.white : Colors.black87,
                             fontSize: 14,
                           ),
                         ),
