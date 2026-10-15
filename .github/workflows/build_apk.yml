@@ -25,10 +25,12 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Create or Fix Android Platform Files
+        run: |
+          flutter create . --org com.mafia.local --platforms=android --overwrite
+
       - name: Get Dependencies
         run: flutter pub get
 
       - name: Build Release APK
-        run: flutter build apk --release --no-pub
-        env:
-          GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+        run: flutter build apk --release
