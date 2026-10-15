@@ -25,11 +25,10 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Clean Project
-        run: flutter clean
-
       - name: Get Dependencies
         run: flutter pub get
 
       - name: Build Release APK
         run: flutter build apk --release --no-pub
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false"
