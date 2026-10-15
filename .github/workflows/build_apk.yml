@@ -25,6 +25,11 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Recreate Android Project Files
+        run: |
+          rm -rf android
+          flutter create . --platforms=android --org com.mafia.game
+
       - name: Get Dependencies
         run: flutter pub get
 
